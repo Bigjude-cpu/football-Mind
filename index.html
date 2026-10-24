@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>MatchMind — Football Match Intelligence</title>
+    <link rel="icon" href="%BASE_URL%icons/icon-192.png" />
+    <link rel="apple-touch-icon" href="%BASE_URL%icons/apple-touch-icon.png" />
+    <link rel="manifest" href="%BASE_URL%manifest.webmanifest" />
+    <meta name="theme-color" content="#06120f" />
+    <meta name="description" content="Football match predictions using Poisson-family models, with real historical data and live scores." />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="MatchMind" />
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      html { min-width: 320px; background: #0a0f1a; }
+      body { background: #0a0f1a; overflow-x: hidden; -webkit-tap-highlight-color: transparent; }
+      #root { min-height: 100vh; isolation: isolate; }
+      img, svg, canvas, video { max-width: 100%; }
+      button, input, select, textarea { font: inherit; }
+      @media (max-width: 640px) {
+        html { -webkit-text-size-adjust: 100%; }
+        body { overscroll-behavior-y: none; }
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>
