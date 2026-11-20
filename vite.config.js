@@ -3,8 +3,11 @@ import react from '@vitejs/plugin-react';
 import { VitePWA } from 'vite-plugin-pwa';
 
 // Single source of truth for the deployment path.
-// For a Capacitor/native build you would change this to '/' only.
-const base = process.env.VITE_BASE_PATH || (process.env.GITHUB_ACTIONS ? '/poisson-football/' : '/');
+// GitHub Pages project sites are served from /<repository-name>/.
+// VITE_BASE_PATH can override this for other hosting targets.
+const base =
+  process.env.VITE_BASE_PATH ||
+  (process.env.GITHUB_ACTIONS ? '/football-Mind/' : '/');
 
 export default defineConfig({
   base,
